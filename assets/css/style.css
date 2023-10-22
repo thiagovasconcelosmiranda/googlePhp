@@ -2,13 +2,16 @@
     margin: 0;
     padding: 0;
 }
+body{
+    position: relative;
+}
 
 ul{
+    width: 100%;
+    height: 50px; 
     display: flex;
     justify-content: end;
-    align-items: center;
-    width: 100%;
-    height: 50px;   
+    align-items: center; 
     background-color: #fff;
 }
 
@@ -173,6 +176,8 @@ height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 0;
+    position: relative;
 }
 
 .container .group-google{
@@ -240,7 +245,7 @@ height: 130px;
 }
 
 .input-google-x{
-   width: 60%;
+   width: 65%;
    height:auto;
    display: flex;
    justify-content: center;
@@ -248,21 +253,48 @@ height: 130px;
    margin-top: 30px;
    position: relative;
 }
+.input-google-x .legend_i-x-voz,
+.input-google-x .legend_i-x-image{
+    width: auto;
+    position: absolute;
+    border: 1px solid #000;
+    z-index: 3;
+    padding: 10px 10px;
+    top: 50px;
+    background-color: #fff;
+}
+
+.legend_i-x-voz{
+    left: 65%;
+    opacity: 0;
+}
+
+ .legend_i-x-image{
+    left: 70%;
+    opacity: 0;
+}
+
+.input-google-x .div-mic .mic:hover .legend_i-x-voz {
+    opacity: 1;
+}
+
+.input-google-x .div-image .image:hover .legend_i-x-image {
+   opacity: 1;
+  }
 
  .input-search{
     width: 100%;
-    height: 50px;
-    padding-left: 40px ;
-   border-radius: 25px;
+    border-radius: 100px;
     border: none;
     background-color: #fff;
     box-shadow: 2px 3px 10px 2px #dfd9d9;
     position: relative;
     outline: none;
     font-size: 16px;
+    padding: 15px 50px;
 }
 
-ion-icon{
+.input-google-x ion-icon{
     position: absolute;
     font-size: 20px;
     left: 2%;  
@@ -273,7 +305,7 @@ ion-icon{
 
 .div-mic{
     position: absolute;
-    left: 88%;
+    left: 80%;
     width: 12%;
     height: 40px;
     cursor: pointer;
@@ -283,36 +315,17 @@ ion-icon{
     background-color: #fff;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+    padding: 0 20px;
 }
 
 .div-mic img{
     height: 25px;
 }
 
-.legend_i-x{
-    width: 130px;
-    position: absolute;
-    border: 1px solid #000;
-    background-color: #fff;
-    padding: 10px;
-    top: 100%;
-    left: -80%;
-    opacity: 0;
-    transition: 1s;
-    z-index: 1;
- }
-.legend_i-x p{
-  text-align: center;
- }
-
- .input-google-x .div-mic:hover .legend_i-x{
-    opacity: 1;
-}
-
 .div-image{
     position: absolute;
     left: 60%;
-    width: 90%;
+    width: 30%;
     height: 40px;
     cursor: pointer;
     display: flex;
@@ -326,23 +339,41 @@ ion-icon{
     height: 15px;
     top: 10px;
 }
-.div-image:hover .legend_i-x-2{
-    opacity: 1;
+
+#autocomplete{
+    width: 100%;
+    box-shadow: 2px 10px 10px 2px #eceaea;
+    padding: 10px 0;
 }
 
-.legend_i-x-2{
-    width: 150px;
-    position: absolute;
-    border: 1px solid #000;
-    padding: 10px;
-    top: 50%;
-    left: -500%;
-    opacity: 0;
-    transition: 2s;
-    z-index: 1;
-    top: 100%;
 
-}
+ #autocomplete ul li{
+    width: 100%;
+    max-width: 88%;
+    border-left: 4px solid blue;
+    display: flex;
+    padding: 20px 40px;
+    cursor: none;
+    margin-top: 20px;
+ }
+
+ #autocomplete .ul-text{
+    width: 100%;
+    cursor: none;
+ }
+ 
+ #autocomplete ul li strong{
+    color: #c5bebe;
+    font-size: 14px;
+    margin-top: 3px;
+    margin-left: 10px;
+ }
+
+ #autocomplete ul li ion-icon{
+   font-size: 16px;
+ }
+ 
+
 
 .legend_i-x-2 p{
     text-align: center;
@@ -351,24 +382,30 @@ ion-icon{
 
 .col-google-x{
     margin: 0 auto;
-    width: 15%;
+    width: 60%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-wrap: wrap;
 }
 
 .list-add{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+   
 }
 
 .item-add{
     width: 100px;
     height: 100px;
-    margin: 10px;
-    padding: 10px;
+    padding: 10px 10px;
     position: relative;
 }
 
@@ -378,6 +415,7 @@ ion-icon{
     left: 100px;
     opacity: 0;
     cursor: pointer;
+    z-index: 1;
 }
 .option-i{
     width: 100px;
@@ -422,7 +460,7 @@ ion-icon{
 .circle-add{
     width: 50px;
     height: 50px;
-    background-color: rgb(228, 220, 220);
+    background-color: rgb(247, 244, 244);
     border-radius: 50%;
     margin: 0 auto;
     cursor: pointer;
@@ -432,7 +470,7 @@ ion-icon{
     position: relative;
 }
 .circle-add img{
-   height: 15px;
+   height: 25px;
 }
 .align-item-x{
     margin: 0 auto;
@@ -441,12 +479,16 @@ ion-icon{
     margin-top: 30px;
 }
 .add_legend{
-    width: 130px;
+    width: 110px;
+    height: 20px;
     border: 1px solid #000;
     padding: 10px;
     position: absolute;
-    left: 80px;
-    top: 100%;
+    left: 0;
+    top: 80%;
+    bottom: 0;
+    right: 0;
+    margin:  auto;
     opacity: 0;
     transition: 1.5s;
     background-color: #fff;
@@ -471,9 +513,11 @@ ion-icon{
    color: #333;
 }
 .chrome{
-    position: absolute;
-    bottom: 45px;
-    right:20px;
+    position: fixed;
+    bottom: 40px;
+    right:0;
+    left: 70%;
+    margin: auto;
     width: 180px;
     padding: 10px;
     cursor: pointer;
@@ -482,6 +526,7 @@ ion-icon{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
     
 }
 .chrome p{
@@ -499,16 +544,22 @@ ion-icon{
 }
 
 .edit-legend{
-    width: 175px;
     position: absolute;
     z-index: 1;
     border: 1px solid #000;
     background-color: #fff;
-    top: 50px;
-    right: 50%;
-    padding: 5px;
+    top: 60px;
+    right: 0;
+    padding: 0;
+    bottom: 0;
+    margin: auto;
     opacity:0;
     transition: 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+   
 }
 
 .edit-legend p{
@@ -520,17 +571,31 @@ ion-icon{
     opacity: 1;
 }
 
-.container-modal{
+.container-modal-add,
+.container-modal-update{
   width: 100%;
-  height: 115vh;
+  height: 100vh;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   background-color: #000;
   position: absolute;
   background: 
   linear-gradient(rgba(5, 5, 5, 0.521), rgba(8, 8, 8, 0.11));
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: none;
 
+}
+
+.container-modal-update{
+    display: none;
+}
+
+.container-modal-add{
+    display: none;
 }
 
 .modal-add{
@@ -538,6 +603,7 @@ ion-icon{
    height: 300px;
    background-color: #fff;
    border-radius: 15px;
+   z-index: 1;
 }
 .text-i-x{
  padding: 20px;
@@ -593,17 +659,28 @@ label{
     border: none;
     color: #a5a2a2;
     padding: 5px;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .input-google-x{
-        width: 93%;
+        width: 100%; 
      }
-      
-    
+
+     .chrome{
+        left: 45%;
+        z-index: 2;
+     }
+     ::-webkit-input-placeholder{
+        font-size: 14px;
+     }
+     #autocomplete {
+        overflow: hidden;
+     }
+     
 }
+
+
 
 
 
