@@ -13,16 +13,16 @@ if($id && $name && $url){
     $icone->setId($id);
     $icone->setName($name);
     $icone->setUrl($url);
-    if($iconeDao->update($icone)){
-        $_SESSION['flash'] = 'Alterado com sucesso';
-    }else{
-        $_SESSION['flash'] = 'Erro: Não adicionado';  
+    if(!$iconeDao->update($icone)){
+        $_SESSION['flash'] = 'Erro: Não alterado';  
     }
         
 }else{
     $_SESSION['flash'] = 'dados imcompletos'; 
 
 }
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 header('Location:'.$base);
 exit;

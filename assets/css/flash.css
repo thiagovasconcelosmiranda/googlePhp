@@ -1,0 +1,43 @@
+.flash{
+    width: 350px;
+    height: 20px;
+    background-color: #222;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 60%;
+    left: 0;
+    bottom:-90%;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    gap: 30px;
+}
+
+.flash .text-msg {
+    color: #fff;
+    font-size: 14px;
+}
+
+.flash .active-i{
+    color: rgb(0, 174, 255);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media screen  and (max-width: 700px){
+    .flash{
+        right: 10%;
+    }
+    .flash .text-msg{
+        font-size: 12px;
+    }
+    
+    .flash .active-i{
+        color: rgb(0, 174, 255);
+        cursor: pointer;
+        font-size: 12px;
+
+    }
+}

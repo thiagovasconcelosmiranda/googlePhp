@@ -72,6 +72,14 @@ class IconeDaoMysql implements IconeDao {
       $sql = $this->pdo->prepare('DELETE FROM atalho WHERE id = :id');
       $sql->bindValue(':id', $id);
       $sql->execute();
+      
+      return true;
+    }
+
+    public function deleteAll(){
+      $sql = $this->pdo->prepare('DELETE FROM atalho');
+      $sql->execute();
+
       return true;
     }
 }

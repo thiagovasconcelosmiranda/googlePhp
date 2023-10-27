@@ -30,6 +30,7 @@ ul .link{
     text-decoration: none;
     color: #000000;
     font-size: 14px;
+
 }
 .link li a:hover{
     text-decoration: underline;
@@ -56,19 +57,19 @@ ul .link{
 }
 
 .option-apps{
-    width: 370px;
-    height: 500px;
+    width: 300px;
+    height: 450px;
     background-color: rgb(202, 223, 230);
     position: absolute;
-    top: 90%;
-    right: -20px;
+    top: 70px;
+    right: -50px;
     border-radius: 25px;
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 2;
-    
+    z-index: 2;  
 }
+
 .option-itens{
     width: 95%;
     height: 95%;
@@ -115,6 +116,7 @@ height: 130px;
     top: 40px;
     opacity: 0;
     transition: 1.5s;
+    z-index: 2;
 }
 .option:hover .option-legend{
     opacity: 1;
@@ -131,17 +133,17 @@ height: 130px;
     height: 10px;
     background-color: cornflowerblue;
     border-radius: 100px;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    position: relative; 
 }
 
 .auth-circle img{
     width: 30px;
     height: 30px;
     border-radius: 100px;
+    cursor: pointer;
 }
 .auth-circle:hover{
     box-shadow: 2px 2px 12px -2px #bdb9b9;
@@ -152,10 +154,11 @@ height: 130px;
     background-color: #000;
     position: absolute;
     top: 40px;
-    padding: 10px;
-    margin-left: -130px;
+    margin-left: -120px;
     opacity: 0;
     transition: 1.5s;
+    z-index: 2;
+    padding: 10px 10px;
 }
 
 .auth-legend p{
@@ -178,6 +181,7 @@ height: 130px;
     align-items: center;
     padding: 10px 0;
     position: relative;
+    margin-top: 30px;
 }
 
 .container .group-google{
@@ -193,47 +197,8 @@ height: 130px;
   justify-content: center;
 
 }
- #autocomplete{
-    width: 100%;
-    height: 150px;
-    box-shadow: -8px 15px 25px 3px #dfdbdb;
-    position: absolute;
-    top:85%;
-    z-index: 2; 
-    background-color: #fff;
-    display: none;
-    
-}
-
- #autocomplete ul{
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-
-#autocomplete ul li{
-    padding: 10px;
-    width: 95%;
-    list-style-type: none;
-    cursor: pointer;
-    margin: -10px;
-    margin-left: -2px;
-}
-
-#autocomplete ul li:hover{
-    width: 96%;
-    background-color: #eeebeb;
-}
-
-#autocomplete li a{
-    text-decoration: none;
-    color: #000;
-}
-
-
 .group-google .image-google-x img{
-  height: 300px;
+  width: 40%;
 }
 .group-input-align{
     width: 100%;
@@ -282,98 +247,117 @@ height: 130px;
    opacity: 1;
   }
 
- .input-search{
+  .container-input{
     width: 100%;
-    border-radius: 100px;
-    border: none;
-    background-color: #fff;
-    box-shadow: 2px 3px 10px 2px #dfd9d9;
-    position: relative;
-    outline: none;
-    font-size: 16px;
-    padding: 15px 50px;
-}
-
-.input-google-x ion-icon{
-    position: absolute;
-    font-size: 20px;
-    left: 2%;  
-    cursor: pointer;
-    color: #888585;
-    overflow: hidden;
-}
-
-.div-mic{
-    position: absolute;
-    left: 80%;
-    width: 12%;
-    height: 40px;
-    cursor: pointer;
     display: flex;
+    height: auto;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    background-color: #fff;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    padding: 0 20px;
-}
-
-.div-mic img{
-    height: 25px;
-}
-
-.div-image{
-    position: absolute;
-    left: 60%;
-    width: 30%;
-    height: 40px;
-    cursor: pointer;
+    flex-direction: column;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border:  1px solid #e0dede;
+    padding: 0 8px;
+    box-shadow: -1px 5px 20px -10px #c5c0c0;
+  }
+  .container-input 
+  .input-align{
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    background-color: #fff;
-    border-top-right-radius: 200px;
-    border-bottom-right-radius: 200px;
-}
-.div-image img{
+  }
+
+  .container-input 
+  .input-align
+   .lupa{
     height: 15px;
-    top: 10px;
+  }
+
+  .container-input 
+  .input-align
+  .input-search{
+   width: 100%;
+   max-width: 65%;
+   padding: 15px 10px;
+   outline: none;
+   border: 0;
 }
 
-#autocomplete{
-    width: 100%;
-    box-shadow: 2px 10px 10px 2px #eceaea;
-    padding: 10px 0;
+.container-input
+ .input-align
+  .mic{
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.container-input
+.input-align
+ .image{
+    height: 15px;
+    margin-left: 15px;
+    cursor: pointer;
 }
 
 
- #autocomplete ul li{
+.container-input 
+.auto-complete{
     width: 100%;
-    max-width: 88%;
-    border-left: 4px solid blue;
     display: flex;
-    padding: 20px 40px;
-    cursor: none;
-    margin-top: 20px;
- }
+    justify-content: left;
+    height:auto;  
+    
+}
 
- #autocomplete .ul-text{
+
+.container-input 
+.auto-complete ul{
     width: 100%;
-    cursor: none;
- }
- 
- #autocomplete ul li strong{
-    color: #c5bebe;
-    font-size: 14px;
-    margin-top: 3px;
-    margin-left: 10px;
- }
+    height: auto;
+    display: block;  
+    padding: 10px 0; 
+}
 
- #autocomplete ul li ion-icon{
-   font-size: 16px;
- }
- 
+.container-input 
+.auto-complete ul li{
+      margin-top: 10px;
+      list-style-type: none;
+      border-left: 3px solid blue;
+      padding: 10px 5px;
+      display: flex;
+      align-items: center;  
+}
 
+.container-input 
+.auto-complete ul li img{
+      height: 15px;
+      margin-left: 10px; 
+}
+
+.container-input 
+.auto-complete ul 
+.li-text{
+    gap: 10px;
+    border: 0;
+}
+.container-input 
+.auto-complete ul 
+.li-text:hover{
+    background-color: transparent;
+}
+
+.container-input .auto-complete ul li:hover{
+   background-color: #dddada;
+}
+
+.container-input .auto-complete ul li a{
+       text-decoration: none;
+       color: #000;
+       margin-left: 10px;
+}
 
 .legend_i-x-2 p{
     text-align: center;
@@ -382,7 +366,7 @@ height: 130px;
 
 .col-google-x{
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -392,19 +376,19 @@ height: 130px;
 
 .list-add{
     width: 100%;
-    max-width: 100%;
+    height: auto;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-   
+
 }
 
 .item-add{
     width: 100px;
-    height: 100px;
+    height: auto;
     padding: 10px 10px;
     position: relative;
 }
@@ -412,11 +396,20 @@ height: 130px;
 .img-option{
     height: 20px;
     position: absolute;
-    left: 100px;
+    left: 85px;
     opacity: 0;
     cursor: pointer;
     z-index: 1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 10px 10px;
 }
+
+.img-option:hover{
+    background-color: #e2dddd;
+}
+
 .option-i{
     width: 100px;
     height: 100px;
@@ -436,9 +429,15 @@ height: 130px;
 }
 
 .i-atalho-text a{
+  width: 100%;
   text-decoration: none;
   color: #000;
+  padding: 5px 0;
+  
 
+}
+.i-atalho-text a:hover{
+    background-color: #c5c0c0;
 }
 
 
@@ -515,7 +514,7 @@ height: 130px;
 .chrome{
     position: fixed;
     bottom: 40px;
-    right:0;
+    right: 0;
     left: 70%;
     margin: auto;
     width: 180px;
@@ -532,7 +531,8 @@ height: 130px;
 .chrome p{
     text-align: center;
     color: rgb(25, 125, 218);
-    margin-left: 10px;
+    
+   
 }
 
 .chrome a{
@@ -579,7 +579,6 @@ height: 130px;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto;
   background-color: #000;
   position: absolute;
   background: 
@@ -599,33 +598,41 @@ height: 130px;
 }
 
 .modal-add{
-   width: 500px;
-   height: 300px;
+   width: 40%;
+   height: auto;
+   padding: 10px 0;
    background-color: #fff;
    border-radius: 15px;
    z-index: 1;
+   padding: 10px 15px;
 }
 .text-i-x{
- padding: 20px;
+    width: 100%;
+     padding: 20px 0;
+ 
 }
 .text-i-x h3{
      color: #888484;
      font-style: inherit;
+     margin-left: 20px;
 }
 
 .modal-add form{
-    width: auto;
-    height: 200px;
+    width: 90%;
+    height: auto;
     padding: 10px;
-    display: flex;
-    justify-content:left;
+    display: block;
+    margin:  0 auto;
 }
 .item-add-align{
-    display: block;
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .group-input-add{
-    width: auto;
+    width: 100%;
     margin-top: 20px;
 }
 label{
@@ -633,51 +640,92 @@ label{
     font-size: 12px;
 }
 .input-modal{
-    width: 280%;
+    width: 100%;
     height: 30px;
     outline: none;
     border: none;
     border-bottom: 3px solid blue ;;
     background-color: #f7f2f2;
     transition: all 2s;
+    padding: 0 5px;
 }
+
 
 .input-modal:hover{
     border-bottom: 3px solid blue ;
 }
 .add-button{
-    margin-top: 40px;
     display: flex;
     justify-content: right;
-    width: 280%;
+    gap: 20px;
 }
 
  button{
-    margin: 10px;
+    margin: 10px 0;
     background-color: #f7f2f2;
     outline: none;
     border: none;
     color: #a5a2a2;
-    padding: 5px;
+    padding: 10px 10px;
     cursor: pointer; 
+    
 }
 
 @media screen and (max-width: 800px) {
+    .group-google .image-google-x img{
+        margin-bottom: 10px;
+        
+      }
     .input-google-x{
         width: 100%; 
      }
 
+     .list-add{
+        width: 110%;
+        display: flex;
+      }
+      .modal-add{
+        width: 70%;
+      }
+      .add-button{
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
      .chrome{
-        left: 45%;
+        left: 30%;
         z-index: 2;
+        font-size: 12px;
      }
+
      ::-webkit-input-placeholder{
-        font-size: 14px;
-     }
-     #autocomplete {
-        overflow: hidden;
+        font-size: 12px;
      }
      
+}
+@media screen and (min-width: 380px) and (max-width: 500px){
+    .option-apps{
+        width: 300px;
+        height: 400px;
+        right: -40px;
+        background-color: red; 
+    }
+}
+
+@media screen and (max-width: 380px) {
+    ::-webkit-input-placeholder{
+        font-size: 10px;
+     }
+     
+}
+
+@media screen and (min-width:1000px ){
+    .option-apps{
+        width: 390px;
+        height: 450px;
+        top: 70px;
+        right: -10px;
+    }
 }
 
 

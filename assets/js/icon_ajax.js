@@ -1,36 +1,39 @@
 
 const base = document.querySelector('.ul').getAttribute('data-id');
-const option = document.querySelector('#option');
-const optionApps = document.querySelector('.option-apps');
-const container = document.querySelector('.container');
 
+function closeOptionClick(){
+  document.querySelectorAll('.option-i').forEach(item =>{
+   item.style.display="none";
+  });
+  document.removeEventListener('click', closeOptionClick);
+  
 
-container.addEventListener('click', () =>{
-   optionApps.style.display='none';
-});
-
-option.addEventListener('click',()=>{
-  if(optionApps.style.display ==="flex"){
-    optionApps.style.display='none';
-  }else{
-    optionApps.style.display='flex';
-  }
-});
-
-
-const add = document.querySelector('#add');
-function buttonOption(id){
-  const AtalhoOption =  document.getElementById(`${id}`);
-  if(AtalhoOption.style.display === "block"){
-    AtalhoOption.style.display = 'none';
-  }else{
-    AtalhoOption.style.display = 'block';
-  }
 }
 
+document.querySelectorAll('.option-img').forEach(item=>{
+  
+ item.addEventListener('click',()=>{
+   closeOptionClick();
+   item.querySelector('.option-i').style.display="block";
+    
+    setTimeout(()=>{
+       document.addEventListener('click', closeOptionClick);
+    },500)
+ })
+})
 
+document.querySelectorAll('.option-img').forEach(item=>{
+   
+  item.addEventListener('click',()=>{
+    closeOptionClick();
+    item.querySelector('.option-i').style.display="block";
+     
+     setTimeout(()=>{
+        document.addEventListener('click', closeOptionClick);
+     },500)
+  })
+})
 
-//Visualizar modal de adicionar atalho
 let modal =  document.querySelector('.container-modal-add');
   document.querySelector('.icone-i').addEventListener('click', ()=>{
        modal.style.display="flex";  
@@ -94,7 +97,7 @@ let adicionarUrl= document.getElementById('adicionarUrl');
 var button =  document.getElementById("button");
 
 adicionarName.addEventListener('input', () =>{
-  adicionarUrl.addEventListener('input', () =>{
+  adicionarUrl.addEventListener('input', () => {
    if(adicionarName.value.length > 0 && adicionarUrl.value.length > 0){
       button.disabled=false;
       button.style.color="blue";
@@ -104,4 +107,3 @@ adicionarName.addEventListener('input', () =>{
    }
    });
 });
-
