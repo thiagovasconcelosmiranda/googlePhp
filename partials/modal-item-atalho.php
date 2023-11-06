@@ -1,9 +1,21 @@
+<?php
+require_once 'config.php';
+require_once 'dao/UserDaoMysql.php';
+
+$user = new UserDaoMysql($pdo);
+$token = '';
+if(!empty($_SESSION['token'])){
+  $token = $_SESSION['token'];
+  $userInfo = $user->findByToken($token);
+}
+?>
 <div class="container-modal-update" id="modal">
            <div class="modal-add">
               <div class="text-i-x">
                   <h3 id="title">Alterar Atalho</h3>
               </div>
               <form method="POST" action="<?=$base;?>/editar_action.php">
+                 <input type="hidden" name='login_id' value="<?=$token != '' ? $userInfo->getId():'';?>">
                  <div class="item-add-align">
                     <input class="input-id" type="hidden" value="" name="id"/>
                  <div class="group-input-add">
@@ -25,12 +37,14 @@
       </div>
 
       <div class="container-modal-add" id="modal">
+     
          <div class="modal-add">
             <div class="text-i-x">
-              <h3 id="title">Adicionar Atalho</h3>
+              <h3 id="title">Adicionar Atalho </h3>
             </div>
             <form method="post" action="<?=$base;?>/adicionar_active.php">
              <div class="item-add-align">
+              <input type="hidden" name='login_id' value="<?=$token != '' ? $userInfo->getId() : '';?>">
               <div class="group-input-add">
                 <label>Nome</label><br>
                 <input class="input-modal" id="adicionarName" type="text" name="name"/>

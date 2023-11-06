@@ -8,12 +8,13 @@ $iconeDao = new IconeDaoMysql($pdo);
 $id = filter_input(INPUT_POST, 'id');
 $name = filter_input(INPUT_POST, 'name');
 $url = filter_input(INPUT_POST, 'url');
+$LoginId = filter_input(INPUT_POST, 'login_id');
 
-if($name && $url){
-   
+if($name && $url && $LoginId){
     $icone = new Icone();
     $icone->setName($name);
     $icone->setUrl($url);
+    $icone->setLoginId($LoginId);
 
     if(!$iconeDao->insert($icone)){
         $_SESSION['flash'] = 'Erro: Não adicionado';  

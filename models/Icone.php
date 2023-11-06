@@ -4,6 +4,7 @@ class Icone {
     private $id;
     private $name;
     private $url;
+    private $loginId;
 
 
     public function  getId(){
@@ -29,10 +30,18 @@ class Icone {
     public function  setUrl($url){
         $this->url = $url;
     }
+
+    public function  getLoginId(){
+        return $this->loginId;
+    }
+
+    public function  setLoginId($loginId){
+        $this->loginId = $loginId;
+    }
 }
 
 interface IconeDao{
-    public function findAll();
+    public function findAll($loginId);
     public function insert(Icone $i);
     public function update(Icone $i);
     public function delete(Icone $i);

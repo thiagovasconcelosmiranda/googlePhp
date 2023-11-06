@@ -17,8 +17,7 @@ if($search){
             'name' => $value->getName(),
             'url' => $value->getUrl(),
         ];
-     }
-    
+     }  
 }  
  
 header('Access-Control-Allow-Origin: *');

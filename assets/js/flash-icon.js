@@ -1,5 +1,5 @@
 
-
+ const loginId = document.querySelector('.container').getAttribute('data-login-id');
 if(document.querySelector('.flash') && document.querySelector('.text-msg') ){
     const msg =  document.querySelector('.flash');
     if(document.querySelector('.text-msg').innerText.length > 2){
@@ -12,12 +12,14 @@ if(document.querySelector('.flash') && document.querySelector('.text-msg') ){
     }   
 }
 
- async function desfazer(id, name, url){
-    if(id && name && url){
+ async function desfazer(id, name, url, loginId){
+    if(id && name && url, loginId){
+        loginI = loginId;
         const data = new FormData();
         data.append('id', id);
         data.append('name', name);
         data.append('url', url);
+        data.append('login_id', loginId);
 
        const req = await fetch(`${base}/adicionar_active.php`, {
         method: 'POST',
@@ -36,31 +38,36 @@ if(document.querySelector('.flash') && document.querySelector('.text-msg') ){
         {
            'id': 1,
            'name': 'Linkedin',
-           'url': 'https://linkedin.com/in/'
+           'url': 'https://linkedin.com/in/',
+           'login_id': loginId
         },
     
         {
             'id': 2,
             'name': 'Facebook',
-            'url': 'https://m.facebook.com/'
+            'url': 'https://m.facebook.com/',
+            'login_id': loginId
          },
     
          {
             'id': 3,
             'name': 'terra',
-            'url': 'https://terra.com.br'
+            'url': 'https://terra.com.br',
+            'login_id': loginId
          },
     
          {
             'id': 4,
             'name': 'Instagram',
-            'url': 'https://www.instagram.com/'
+            'url': 'https://www.instagram.com/',
+            'login_id': loginId
          },
     
          {
             'id': 5,
             'name': 'Uol',
-            'url': 'https://noticias.uol.com.br/'
+            'url': 'https://noticias.uol.com.br/',
+            'login_id': loginId
          }
     ];
 
@@ -72,9 +79,9 @@ if(document.querySelector('.flash') && document.querySelector('.text-msg') ){
 
     if(json.error != ''){
         array.forEach(item =>{
-            desfazer(item.id ,item.name, item.url);
+            desfazer(item.id ,item.name, item.url, loginId);
           });  
-         // location.reload();
+         location.reload();
     }
 
     

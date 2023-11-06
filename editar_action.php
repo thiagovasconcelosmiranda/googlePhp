@@ -7,12 +7,15 @@ $iconeDao = new IconeDaoMysql($pdo);
 $id = filter_input(INPUT_POST, 'id');
 $name = filter_input(INPUT_POST, 'name');
 $url = filter_input(INPUT_POST, 'url');
+$loginId = filter_input(INPUT_POST, 'login_id');
 
-if($id && $name && $url){
+if($id && $name && $url && $loginId){
     $icone = new Icone();
     $icone->setId($id);
     $icone->setName($name);
     $icone->setUrl($url);
+    $icone->setLoginId($loginId);
+
     if(!$iconeDao->update($icone)){
         $_SESSION['flash'] = 'Erro: Não alterado';  
     }

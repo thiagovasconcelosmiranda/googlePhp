@@ -8,10 +8,12 @@ class IconeDaoMysql implements IconeDao {
       $this->pdo = $driver;
     }
 
-    public function findAll(){
+    public function findAll($loginId){
       $list = [];
-      $sql = $this->pdo->query('SELECT * FROM atalho');
-      
+      $sql = $this->pdo->prepare('SELECT * FROM atalho WHERE login_id = :login_id');
+       $sql->bindValue(':login_id', $loginId);
+       $sql->execute();
+
       if($sql->rowCount() > 0){
         $dado = $sql->fetchAll();
 
@@ -35,30 +37,38 @@ class IconeDaoMysql implements IconeDao {
       $sql->execute();
 
       if($sql->rowCount() > 0){
+        
          $dado = $sql->fetch(PDO::FETCH_ASSOC);
          $icone = new Icone();
          $icone->setId($dado['id']);
          $icone->setName($dado['name']);
          $icone->setUrl($dado['url']);
-
+         $icone->setLoginId($dado['login_id']);
          return $icone;
       }
 
       return false;
     }
     public function insert(Icone $i){
-        $sql= $this->pdo->prepare('INSERT INTO atalho (name, url) VALUES (:name, :url)');
+        $sql= $this->pdo->prepare('INSERT INTO atalho (name, url, login_id) VALUES (:name, :url, :login_id)');
         $sql->bindValue(':name', $i->getName());
         $sql->bindValue(':url', $i->getUrl());
+        $sql->bindValue(':login_id', $i->getLoginId());
         $sql->execute();
         return true;
     }
 
     public function update(Icone $i){
-       $sql = $this->pdo->prepare('UPDATE atalho SET name = :name, url = :url  WHERE id = :id');
+       $sql = $this->pdo->prepare('UPDATE atalho
+        SET
+          name = :name,
+          url = :url,
+          login_id = :login_id 
+        WHERE id = :id');
        $sql->bindValue(':id', $i->getId());
        $sql->bindValue(':name', $i->getName());
        $sql->bindValue(':url', $i->getUrl());
+       $sql->bindValue(':login_id', $i->getLoginId());
        $sql->execute();
 
        if($sql){

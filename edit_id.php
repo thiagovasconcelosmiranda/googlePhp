@@ -12,6 +12,7 @@ if($id){
     $array['id'] = $icons->getId();
     $array['name'] = $icons->getName();
     $array['url'] = $icons->getUrl();
+    $array['login_id'] = $icons->getLoginId();
     $array['error'] = '';
 }else{
     $array['error'] = 'Id não enviado';

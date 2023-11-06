@@ -12,6 +12,11 @@
     visibility: hidden;  
 }
 
+a{
+    text-decoration: none;
+    color: #000;
+}
+
 .container-user
 .info-close-x{
    width: 100%;
@@ -82,7 +87,6 @@
 
 .button-user:hover{
     background-color: rgb(200, 207, 216); 
-    background-color: red;
 }
 
 .row-user-button{
@@ -168,7 +172,6 @@
 
   @media (min-width: 400px) and (max-width: 500px) {
     .container-user {
-        background-color: green;
         left: -350px;
       }
   }

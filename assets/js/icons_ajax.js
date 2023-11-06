@@ -6,8 +6,6 @@ function closeOptionClick(){
    item.style.display="none";
   });
   document.removeEventListener('click', closeOptionClick);
-  
-
 }
 
 document.querySelectorAll('.option-img').forEach(item=>{
@@ -19,8 +17,8 @@ document.querySelectorAll('.option-img').forEach(item=>{
     setTimeout(()=>{
        document.addEventListener('click', closeOptionClick);
     },500)
- })
-})
+ });
+});
 
 document.querySelectorAll('.option-img').forEach(item=>{
    
@@ -32,19 +30,24 @@ document.querySelectorAll('.option-img').forEach(item=>{
         document.addEventListener('click', closeOptionClick);
      },500)
   })
-})
+});
 
 let modal =  document.querySelector('.container-modal-add');
-  document.querySelector('.icone-i').addEventListener('click', ()=>{
-       modal.style.display="flex";  
-  });
+  if(document.querySelector('.icone-i')){
+    document.querySelector('.icone-i').addEventListener('click', ()=>{
+      modal.style.display="flex";  
+    });
+  }
+  
+
   document.querySelectorAll('.add-button button').forEach(item =>{
     item.addEventListener('click',()=>{
       modal.style.display="none";  
     });
 });
 
-let modalUpdate = document.querySelector('.container-modal-update')
+let modalUpdate = document.querySelector('.container-modal-update');
+
 async function buttonUpdate(id){
    modalUpdate.style.display="flex";
    
@@ -91,7 +94,7 @@ function veryInput(){
 
 veryInput();
 
-//
+
 let adicionarName = document.getElementById('adicionarName');
 let adicionarUrl= document.getElementById('adicionarUrl');
 var button =  document.getElementById("button");

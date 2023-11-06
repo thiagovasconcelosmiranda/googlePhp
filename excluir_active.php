@@ -10,6 +10,7 @@ $id = filter_input(INPUT_GET, 'id');
 if($id){
     $atalhos = $iconeDao->findId($id);
     $_SESSION['atalho-item'] = serialize($atalhos);
+   
 
    if($iconeDao->delete($id)){
       $_SESSION['flash'] = 'Atalho Alterado';

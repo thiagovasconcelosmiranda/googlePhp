@@ -1,4 +1,3 @@
-
 const search = document.querySelector('.input-search');
 const containerInput = document.querySelector('.container-input');
 const autocomplete = document.querySelector('.auto-complete');

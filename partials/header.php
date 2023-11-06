@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <ul class="ul" data-id="<?=$base;?>" >
+    <ul class="ul" data-id="<?=$base;?>">
         <div class="link">
             <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl">Gmail</a></li>
             <li><a href="https://www.google.com/imghp?hl=pt-BR&tab=ri&authuser=0&ogbl">Imagens</a></li>
@@ -32,10 +32,19 @@
                <div class="option-itens">
                  <div class="icons">
                   <div class="item-text-icon">
+                     
+                  <?php if(!empty($token)): ?>
                     <a>
                       <img src="<?=$base;?>/assets/images/perfil.png" alt="perfil" >
+                      <p><?=$userInfo->getFirstname();?></p>
+                    </a>
+                    <?php else: ?>
+                      <a>
+                      <img src="<?=$base;?>/assets/images/login.png" alt="perfil" >
                       <p>Conta</p>
                     </a>
+                    <?php endif; ?>
+
                   </div>
                   <div class="item-text-icon">
                     <img src="<?=$base;?>/assets/images/icons8-google-logo-48.png" alt="perfil" >
@@ -106,14 +115,22 @@
                </div>
               </div>
             </div>
+            <?php if(!empty($_SESSION['token'])):?>
             <div class="auth-circle">
-              <img id="userClick"  src="<?=$base;?>/assets/images/perfil.png" alt="perfil">
+              <img id="userClick"  src="<?=$base;?>/assets/media/avatars/<?=$userInfo->getAvatar();?>" alt="perfil">
               <div class="auth-legend" >
                 <p>Conta do google</p>
-                <p class="user">Thiago univer</p>
-                <p class="email">profissao33@gmail.com</p>
+                <p class="user"><?=$userInfo->getSurname();?></p>
+                <p class="email"><?=$userInfo->getEmail();?></p>
               </div>
               <?php require 'modal-user.php';?>
             </div>
+            <?php else: ?>
+               <div class="button-user-acess">
+                  <a href="<?=$base;?>/signin.php">
+                      <button>Sign in</button>
+                   </a>
+               </div>
+              <?php endif; ?>
         </div>
     </ul>
