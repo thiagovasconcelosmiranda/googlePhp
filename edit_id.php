@@ -7,18 +7,17 @@ $array = [];
 
 $id = filter_input(INPUT_GET, 'id');
 
-if($id){
+if ($id) {
     $icons = $iconeDao->findId($id);
     $array['id'] = $icons->getId();
     $array['name'] = $icons->getName();
     $array['url'] = $icons->getUrl();
     $array['login_id'] = $icons->getLoginId();
     $array['error'] = '';
-}else{
+} else {
     $array['error'] = 'Id não enviado';
 }
 
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
-
 echo json_encode($array);

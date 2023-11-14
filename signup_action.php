@@ -22,7 +22,6 @@ if($firstname && $month && $day
     $birthdate = $year.'-'.$month.'-'.$day;
     $avatar = '';
    
-
      if(isset($_FILES['avatar']) && !empty($_FILES['avatar']['tmp_name'])){
          $newAvatar = $_FILES['avatar'];
          if(in_array($newAvatar['type'], ['image/jpeg', 'image/jpg', 'image/png'])){

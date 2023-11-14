@@ -6,10 +6,10 @@ $userDao = new UserDaoMysql($pdo);
 $array = [];
 $email = filter_input(INPUT_GET, 'email');
 
-if($email){
+if ($email) {
     $veryEmail = $userDao->findByEmail($email);
- 
-   $array['email'] = $veryEmail;
+
+    $array['email'] = $veryEmail;
 }
 
 
@@ -17,4 +17,3 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
 echo json_encode($veryEmail);
-

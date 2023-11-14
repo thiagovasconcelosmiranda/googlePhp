@@ -9,23 +9,23 @@ $name = filter_input(INPUT_POST, 'name');
 $url = filter_input(INPUT_POST, 'url');
 $loginId = filter_input(INPUT_POST, 'login_id');
 
-if($id && $name && $url && $loginId){
+if ($id && $name && $url && $loginId) {
     $icone = new Icone();
     $icone->setId($id);
     $icone->setName($name);
     $icone->setUrl($url);
     $icone->setLoginId($loginId);
 
-    if(!$iconeDao->update($icone)){
-        $_SESSION['flash'] = 'Erro: Não alterado';  
+    if (!$iconeDao->update($icone)) {
+        $_SESSION['flash'] = 'Erro: Não alterado';
     }
-        
-}else{
-    $_SESSION['flash'] = 'dados imcompletos'; 
+
+} else {
+    $_SESSION['flash'] = 'dados imcompletos';
 
 }
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-header('Location:'.$base);
+header('Location:' . $base);
 exit;

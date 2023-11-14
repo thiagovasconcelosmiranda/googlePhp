@@ -8,33 +8,32 @@
     z-index: 2;
     border-radius: 35px;
     padding: 10px 0px;
-    box-shadow: 5px 5px -10px -20px #cecfcf; 
-    visibility: hidden;  
+    box-shadow: 5px 5px -10px -20px #cecfcf;
+    visibility: hidden;
 }
 
-a{
+a {
     text-decoration: none;
     color: #000;
 }
 
-.container-user
-.info-close-x{
-   width: 100%;
-   height: 30px;
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-   position: relative;
+.container-user .info-close-x {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
 }
 
-.icone-close-user{
- font-size: 25px;
- position: absolute;
- left: 90%;
- cursor: pointer;
+.icone-close-user {
+    font-size: 25px;
+    position: absolute;
+    left: 90%;
+    cursor: pointer;
 }
 
-.photo-user{
+.photo-user {
     width: 100%;
     height: auto;
     display: flex;
@@ -42,8 +41,8 @@ a{
     align-items: center;
     padding: 20px 0;
 }
-.photo-user
-.circle-user{
+
+.photo-user .circle-user {
     width: 80px;
     height: 80px;
     border-radius: 100%;
@@ -52,22 +51,22 @@ a{
     align-items: center;
     overflow: hidden;
 }
-.photo-user
-.circle-user img{
+
+.photo-user .circle-user img {
     width: 105%;
     height: 105%;
 }
 
-.text-user{
+.text-user {
     width: 100%;
 }
 
-.text-user h3{
+.text-user h3 {
     text-align: center;
     font: 25px normal Arial;
 }
 
-.button-i-user{
+.button-i-user {
     width: 100%;
     height: auto;
     display: flex;
@@ -76,20 +75,19 @@ a{
     padding: 10px 0;
 }
 
-.button-i-user
-.button-user{
+.button-i-user .button-user {
     border: 1px solid #818181;
     border-radius: 25px;
     background-color: transparent;
     color: blue;
-   
+
 }
 
-.button-user:hover{
-    background-color: rgb(200, 207, 216); 
+.button-user:hover {
+    background-color: rgb(200, 207, 216);
 }
 
-.row-user-button{
+.row-user-button {
     width: 100%;
     height: auto;
     display: flex;
@@ -98,41 +96,37 @@ a{
     gap: 5px;
 }
 
-.row-user-button
-.col-add-user{
+.row-user-button .col-add-user {
     width: 40%;
     height: auto;
 }
 
-.col-add-user
-.button-add,
-.button-out{
- width: 100%;
- height: 50px;
- display: flex;
- justify-content: center;
- align-items: center;
- background-color: rgb(234, 238, 241);
- cursor: pointer;
+.col-add-user .button-add,
+.button-out {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(234, 238, 241);
+    cursor: pointer;
 }
 
-.button-add{
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  gap: 10px;
+.button-add {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    gap: 10px;
 }
-.button-add
-.add-icon{
+
+.button-add .add-icon {
     font-size: 25px;
 }
 
-.button-out
-.out-icon{
+.button-out .out-icon {
     font-size: 25px;
 }
 
-
-.circle-icon{
+.circle-icon {
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -140,38 +134,40 @@ a{
     background-color: #c0e7e9;
 }
 
-.button-out{
+.button-out {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     gap: 10px;
-  }
+}
 
-  .button-add:hover,
-  .button-out:hover{
-    background-color: rgb(200, 207, 216); 
-  }
+.button-add:hover,
+.button-out:hover {
+    background-color: rgb(200, 207, 216);
+}
 
-  .policy-user{
+.policy-user {
     width: 100%;
     display: flex;
     margin-top: 10px;
     align-items: center;
     justify-content: center;
     padding: 10px 0;
-  }
-  .policy-user p{
+}
+
+.policy-user p {
     font-size: 12px;
     color: #818181;
-  }
-  @media screen and (max-width: 400px) {
-    .container-user {
-      width: 300px; 
-      left: -270px;
-    }
-  }
+}
 
-  @media (min-width: 400px) and (max-width: 500px) {
+@media screen and (max-width: 400px) {
+    .container-user {
+        width: 300px;
+        left: -270px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
     .container-user {
         left: -350px;
-      }
-  }
+    }
+}

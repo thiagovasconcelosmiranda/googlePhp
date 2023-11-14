@@ -2,9 +2,9 @@
 require 'config.php';
 session_start();
 
-if(!empty($_SESSION['token'])){
+if (!empty($_SESSION['token'])) {
     $_SESSION['token'] = '';
 
-    header('Location: '.$base);
+    header('Location: ' . $base);
     exit;
 }
