@@ -108,9 +108,9 @@ $title = "Fazer login - Google";
                 </div>
                 <div class="link"></div>
                 <div class="group-row m-x">
-                    <div class="col-acess-2 ">
+                    <div class="col-acess-2">
                         <a class="back">
-                            <p>Back</p>
+                            <p onclick="back('gender')">Back</p>
                         </a>
                     </div>
                     <div class="col-acess-2 align-i">
@@ -145,7 +145,7 @@ $title = "Fazer login - Google";
                 <div class="group-row">
                     <div class="col-acess-2">
                         <a class="back">
-                            <p>Back</p>
+                            <p onclick="back('email')">Back</p>
                         </a>
                     </div>
                     <div class="col-acess-2 align-i">
@@ -180,7 +180,7 @@ $title = "Fazer login - Google";
                 <div class="group-row">
                     <div class="col-acess-2">
                         <a class="back">
-                            <p>Back</p>
+                            <p onclick="back('password')">Back</p>
                         </a>
                     </div>
                     <div class="col-acess-2 align-i">
@@ -210,7 +210,7 @@ $title = "Fazer login - Google";
                 <div class="group-row">
                     <div class="col-acess-2">
                         <a class="back">
-                            <p>Back</p>
+                            <p onclick="back('upload')">Back</p>
                         </a>
                     </div>
                     <div class="col-acess-2 align-i">

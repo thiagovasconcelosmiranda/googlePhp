@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-$title="signin";
+$title="Login to google accounts";
 ?>
 <?php require 'partials/header-login.php';?>
 <form method="POST" action="<?=$base;?>/signin_action.php">
@@ -22,7 +22,7 @@ $title="signin";
                     </div>
                 </div>
                 <div class="link">
-                    <a href="<?=$base;?>/">Forgot Email?</a>
+                    <a href="<?=$base;?>/z">Forgot Email?</a>
                 </div>
                 <div class="access-i">
                     <p>Not your computer? Use Guest mode to sign in privately.

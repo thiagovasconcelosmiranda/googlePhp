@@ -243,6 +243,26 @@ if (document.querySelectorAll('.group-i') && document.getElementById('button-sig
     });
     document.removeEventListener('click', removeBorderfieldset);
   }
+  function back(item){
+    switch(item){
+      case 'gender':
+        name.style.display = "flex";
+        date.style.display = "none";
+      break;
+      case 'email':
+         email.style.display = "none"
+         date.style.display = "flex";
+      break;
+      case 'password':
+        email.style.display = "flex";
+        password.style.display = "none";
+      break;
+      case 'upload':
+        password.style.display = "flex";
+        upload.style.display = "none";
+      break;
+    }
+  }
 
 }
 
