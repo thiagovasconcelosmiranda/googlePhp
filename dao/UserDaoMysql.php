@@ -86,7 +86,6 @@ class UserDaoMysql implements UserDao
       return $dado;
     }
     return false;
-
   }
 
   public function insert(User $u)

@@ -87,6 +87,7 @@ if (document.querySelectorAll('.group-i') && document.getElementById('button-sig
         }
         let errorInput = document.getElementById('error-5');
         let errorMsg = document.getElementById('msg-5');
+        
         if (validateEmail(item.value) == false) {
           errorInput.classList.add('alert-error-fieldeset');
           errorInput.style.display = "flex";

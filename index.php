@@ -15,7 +15,6 @@ if (!empty($_SESSION['token'])) {
   }
 
   $iconeDao = new IconeDaoMysql($pdo);
-
   $icones = $iconeDao->findAll($userInfo->getId());
 }
 
@@ -78,6 +77,7 @@ if (!empty($_SESSION['flash'])) {
                 </div>
               </div>
             </div>
+
             <div class="auto-complete"></div>
           </div>
         </div>
@@ -140,7 +140,6 @@ if (!empty($_SESSION['flash'])) {
           </div>
         <?php endif; ?>
       </div>
-      
     </div>
   </div>
 </main>

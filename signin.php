@@ -22,7 +22,7 @@ $title="Login to google accounts";
                     </div>
                 </div>
                 <div class="link">
-                    <a href="<?=$base;?>/z">Forgot Email?</a>
+                    <a href="<?=$base;?>/recover-email.php">Forgot Email?</a>
                 </div>
                 <div class="access-i">
                     <p>Not your computer? Use Guest mode to sign in privately.

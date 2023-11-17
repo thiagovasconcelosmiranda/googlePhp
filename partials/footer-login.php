@@ -24,6 +24,7 @@
    </div>
    <script src="<?= $base; ?>/assets/js/signin.js"></script>
    <script src="<?= $base; ?>/assets/js/signup.js"></script>
+   <script src="<?= $base; ?>/assets/js/recover-email.js"></script>
    </body>
 
    </html>

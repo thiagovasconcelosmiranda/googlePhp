@@ -10,7 +10,7 @@
 <?php endif; ?>
 </main>
 <?php if (empty($token)):?>
-<footer>
+    <footer>
     <div class="footer-row" >
         <div class="language-i">
             <a href="">Brazil</a>
@@ -47,8 +47,9 @@
             </div>
         </div>
     </div>
-</footer>
+    </footer>
 <?php endif; ?>
+
 <script src="<?= $base; ?>/assets/js/flash-icons.js"></script>
 <script src="<?= $base; ?>/assets/js/icons_ajax.js"></script>
 <script src="<?= $base; ?>/assets/js/search_ajax.js"></script>
@@ -59,4 +60,5 @@
 <script src="<?= $base; ?>/assets/js/link-footer.js"></script>
 <script src="<?= $base; ?>/assets/js/apparence_ajax.js"></script>
 </body>
+
 </html>
