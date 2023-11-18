@@ -7,6 +7,7 @@ $array = [];
 $email = filter_input(INPUT_GET, 'email');
 
 if ($email) {
+
     $veryEmail = $userDao->findByEmail($email);
 
     $array['email'] = $veryEmail;

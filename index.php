@@ -143,6 +143,16 @@ if (!empty($_SESSION['flash'])) {
     </div>
   </div>
 </main>
+<?php if (!empty($token)): ?>
+    <div class="chrome">
+        <a href="">
+            <p><img src="<?= $base; ?>/assets/images/icons8-editar-24.png" height="15" />Personalizar o Chrome</p>
+        </a>
+        <div class="edit-legend">
+            <p>Personalizar está página</p>
+        </div>
+    </div>
+<?php endif; ?>
 <?php require 'partials/modal-item-atalho.php'; ?>
 <?php require 'partials/flash.php'; ?>
 <?php require 'partials/modal-mic.php'; ?>

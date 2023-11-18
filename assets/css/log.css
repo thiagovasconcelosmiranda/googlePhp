@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-login {
+  margin: 0 auto;
+  width: 90%;
+  height: 75vh;
+
+}
+
+.container-login .row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.row .col-login {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: -15px;
+}
+
+.row .col-login form {
+  width: 100%;
+  max-width: 370px;
+  height: auto;
+  border: 1px solid #a3a2a2;
+  border-radius: 10px;
+  padding: 40px 0;
+}
+
+
+form .group-align .group-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+ .group-title img {
+  width: 80px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.group-title h2 {
+  text-align: center;
+  font: 25px normal Arial;
+  margin-bottom: 20px;
+}
+.group-title .title-p{
+   width: 80%;
+   margin: 0 auto;
+
+}
+.group-title .user-email{
+  width: 60%;
+  border: 1px solid #CCC;
+  margin: 0 auto;
+  padding: 3px 5px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.group-title .user-email p{
+   font-size: 14px;
+}
+
+.group-title .user-email ion-icon{
+   color: #333;
+   font-size: 25px;
+}
+
+.group-title p {
+  text-align: center;
+  width: 100%;
+  font: 18px normal Arial;
+}
+
+.group-i {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#name {
+  display: flex;
+}
+
+#recover-email {
+  display: flex;
+}
+.env-email-recover{
+  display: none;
+}
+
+#group-signin-email {
+  display: flex;
+}
+
+#recover-password{
+  display: flex;
+}
+
+.containeri-x .image-i {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containeri-x .image-i img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.group-i .containeri-x {
+  width: 80%;
+  height: auto;
+}
+
+ .group-image-x{
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(50deg, rgba(243, 240, 240, 0.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(221, 221, 221, 0.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(240, 240, 245, 0.8), rgba(0,0,255,0) 70.71%);
+  position: relative;
+  
+}
+
+.group-image-x img{
+position: absolute;
+}
+
+.containeri-x fieldset {
+  width: 100%;
+  border: 1px solid rgb(115, 115, 117);
+  overflow: hidden;
+}
+
+.align-i .fieldset-border {
+  border: 2px solid blue;
+}
+
+.fieldset-row {
+  display: flex;
+  gap: 20px;
+}
+
+.fieldset-row fieldset .input-day,
+.fieldset-row fieldset .input-Year {
+  width: 60%;
+}
+
+.fieldset-row-2 {
+  margin-top: 20px;
+}
+
+.fieldset-row .alert-error-fieldeset,
+.fieldset-row-2 .alert-error-fieldeset {
+  border: 2px solid red;
+}
+
+.align-i {
+  width: 100%;
+}
+
+.align-i span {
+  color: red;
+  font-size: 10px;
+  display: none;
+}
+
+.containeri-x fieldset .gender-select {
+  width: 95%;
+  padding: 10px 0;
+  border: 0;
+  outline: none;
+  font: 16px normal arial;
+}
+
+.fieldset-row fieldset select {
+  padding: 10px 10px;
+  border: 0;
+  outline: none;
+}
+
+.containeri-x fieldset legend {
+  color: rgb(115, 115, 117);
+  margin-left: 10px;
+  font: 16px normal Arial;
+}
+
+.containeri-x fieldset input {
+  width: 100%;
+  border: 0;
+  padding: 10px 10px;
+  outline: none;
+}
+
+.containeri-x fieldset .upload-avatar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.upload-avatar img {
+  cursor: pointer;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.containeri-x .confirm-email-text {
+  text-align: center;
+  font-size: 12px;
+  color: #a3a2a2;
+  padding: 10px 0;
+}
+
+.containeri-x .link {
+  width: auto;
+  padding: 10px 0;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.link a {
+  text-decoration: none;
+  color: blue;
+  font: 16px normal Arial;
+}
+
+.containeri-x .access-i {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.access-i p {
+  font: 16px normal Arial;
+  color: #868686;
+}
+
+.access-i p a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.containeri-x .group-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.group-row .col-acess-2 {
+  width: 100%;
+}
+
+.m-x {
+  padding: 50px 0;
+}
+
+.group-row .col-acess-2 a {
+  text-decoration: none;
+  color: blue;
+  font: 14px normal Arial;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.group-row .col-acess-2 button {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgb(41, 103, 236);
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.group-row .col-acess-2 button:hover {
+  background-color: rgb(32, 79, 182);
+}
+
+.group-row .align-i {
+  display: flex;
+  justify-content: right;
+}
+
+.group-footer-row {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  margin:  0 auto;
+  gap: 20px;
+}
+
+.group-footer-row .col-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+ 
+}
+
+.col-footer .select-footer {
+  border: 0;
+  outline: none;
+}
+
+.col-footer a {
+  text-decoration: none;
+  color: #5a5757;
+}
+
+@media screen and (max-width: 700px){
+  .group-footer-row {
+    flex-direction: column;
+  }
+}

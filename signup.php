@@ -132,11 +132,10 @@ $title = "Fazer login - Google";
                 </div>
                 <div class="fieldset-row-2">
                     <div class="align-i">
-                        <fieldset id="error-5">
+                        <fieldset>
                             <legend>Phone (optional)</legend>
-                            <input type="text" id="5" placeholder="Phone" name="phone">
+                            <input type="text" placeholder="Phone" name="phone">
                         </fieldset>
-                        <span id="msg-5">Obrigatório</span>
                     </div>
                 </div>
                 <p class="confirm-email-text">You'll need to confirm that this email belongs to you</p>

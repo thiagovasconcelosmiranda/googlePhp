@@ -61,7 +61,7 @@ ul .link {
 }
 
 .button-user-acess {
-    padding: 0 10px;
+    padding: 0 30px;
 }
 
 .button-user-acess button {
@@ -193,10 +193,11 @@ ul .link {
     opacity: 1;
 }
 
-.container {
+main .container {
     width: 100%;
-    height: auto;
+    height: 100%;
     position: relative;
+    padding: 20px 0;
 }
 
 .container .group-google {
@@ -224,7 +225,6 @@ ul .link {
     margin-top: -60px;
     display: flex;
     justify-content: center;
-   
 }
 
 .input-google-x {
@@ -278,7 +278,7 @@ ul .link {
     border-bottom-left-radius: 50px;
     border: 1px solid #e0dede;
     padding: 0 8px;
-    box-shadow: -1px 5px 20px -10px #c5c0c0; 
+    box-shadow: -1px 5px 20px -10px #c5c0c0;
 }
 
 .upload-image-group {
@@ -880,17 +880,22 @@ button {
     cursor: pointer;
 
 }
-footer{
-    height: 20vh;
-    padding: 20px 0;
+
+footer {
+    width: 100%;
+    height: auto;
     margin-top: 40px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 footer .footer-row {
     width: 100%;
     background-color: #e9e7e7;
-    padding: 35px 0;
-    
+    padding: 20px 0;
+
 }
 
 .footer-row .language-i {

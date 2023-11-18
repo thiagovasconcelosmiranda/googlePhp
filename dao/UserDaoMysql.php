@@ -57,6 +57,7 @@ class UserDaoMysql implements UserDao
 
   public function update(User $u)
   {
+
     $sql = $this->pdo->prepare("UPDATE logins
         set
           firstname = :firstname,
